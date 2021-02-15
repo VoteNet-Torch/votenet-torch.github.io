@@ -11,14 +11,6 @@
 			"reset",
 			"reset user data message"
 		],
-		"vs/base/common/errorMessage": [
-			"stackTrace.format",
-			"nodeExceptionMessage",
-			"error.defaultMessage",
-			"error.defaultMessage",
-			"error.moreErrors",
-			"error.defaultMessage"
-		],
 		"vs/workbench/browser/workbench": [
 			"loaderErrorNative"
 		],
@@ -128,6 +120,14 @@
 			"moreFile",
 			"moreFiles"
 		],
+		"vs/base/common/errorMessage": [
+			"stackTrace.format",
+			"nodeExceptionMessage",
+			"error.defaultMessage",
+			"error.defaultMessage",
+			"error.moreErrors",
+			"error.defaultMessage"
+		],
 		"vs/platform/extensionManagement/common/extensionManagement": [
 			"extensions",
 			"preferences"
@@ -223,14 +223,14 @@
 			},
 			"statusUnsupported"
 		],
-		"vs/workbench/api/common/extHostWorkspace": [
-			"updateerror"
+		"vs/workbench/api/common/extHostExtensionService": [
+			"extensionTestError"
 		],
 		"vs/workbench/api/common/extHostTerminalService": [
 			"launchFail.idMissingOnExtHost"
 		],
-		"vs/workbench/api/common/extHostExtensionService": [
-			"extensionTestError"
+		"vs/workbench/api/common/extHostWorkspace": [
+			"updateerror"
 		],
 		"vs/base/node/processes": [
 			"TaskRunner.UNC"
@@ -2893,30 +2893,15 @@
 			"badVariableUse",
 			"badFile"
 		],
-		"vs/workbench/contrib/snippets/browser/configureSnippets": [
-			"global.scope",
-			"global.1",
-			"name",
-			"bad_name1",
-			"bad_name2",
-			"bad_name3",
-			"new.global_scope",
-			"new.global",
-			"new.workspace_scope",
-			"new.folder",
-			"group.global",
-			"new.global.sep",
-			"new.global.sep",
-			"openSnippet.pickLanguage",
-			"openSnippet.label",
-			"preferences",
-			{
-				"key": "miOpenSnippets",
-				"comment": [
-					"&& denotes a mnemonic"
-				]
-			},
-			"userSnippets"
+		"vs/workbench/contrib/snippets/browser/insertSnippet": [
+			"snippet.suggestions.label",
+			"sep.userSnippet",
+			"sep.extSnippet",
+			"sep.workspaceSnippet",
+			"disableSnippet",
+			"isDisabled",
+			"enable.snippet",
+			"pick.placeholder"
 		],
 		"vs/workbench/contrib/themes/browser/themes.contribution": [
 			"selectTheme.label",
@@ -2950,14 +2935,6 @@
 			"selectTheme.label",
 			"themes.selectIconTheme.label"
 		],
-		"vs/workbench/contrib/update/browser/update.contribution": [
-			{
-				"key": "miReleaseNotes",
-				"comment": [
-					"&& denotes a mnemonic"
-				]
-			}
-		],
 		"vs/workbench/contrib/watermark/browser/watermark": [
 			"watermark.showCommands",
 			"watermark.quickAccess",
@@ -2976,11 +2953,44 @@
 			"watermark.startDebugging",
 			"tips.enabled"
 		],
+		"vs/workbench/contrib/update/browser/update.contribution": [
+			{
+				"key": "miReleaseNotes",
+				"comment": [
+					"&& denotes a mnemonic"
+				]
+			}
+		],
 		"vs/workbench/contrib/surveys/browser/nps.contribution": [
 			"surveyQuestion",
 			"takeSurvey",
 			"remindLater",
 			"neverAgain"
+		],
+		"vs/workbench/contrib/snippets/browser/configureSnippets": [
+			"global.scope",
+			"global.1",
+			"name",
+			"bad_name1",
+			"bad_name2",
+			"bad_name3",
+			"new.global_scope",
+			"new.global",
+			"new.workspace_scope",
+			"new.folder",
+			"group.global",
+			"new.global.sep",
+			"new.global.sep",
+			"openSnippet.pickLanguage",
+			"openSnippet.label",
+			"preferences",
+			{
+				"key": "miOpenSnippets",
+				"comment": [
+					"&& denotes a mnemonic"
+				]
+			},
+			"userSnippets"
 		],
 		"vs/workbench/contrib/surveys/browser/languageSurveys.contribution": [
 			"helpUs",
@@ -2988,15 +2998,18 @@
 			"remindLater",
 			"neverAgain"
 		],
-		"vs/workbench/contrib/snippets/browser/insertSnippet": [
-			"snippet.suggestions.label",
-			"sep.userSnippet",
-			"sep.extSnippet",
-			"sep.workspaceSnippet",
-			"disableSnippet",
-			"isDisabled",
-			"enable.snippet",
-			"pick.placeholder"
+		"vs/workbench/contrib/welcome/overlay/browser/welcomeOverlay": [
+			"welcomeOverlay.explorer",
+			"welcomeOverlay.search",
+			"welcomeOverlay.git",
+			"welcomeOverlay.debug",
+			"welcomeOverlay.extensions",
+			"welcomeOverlay.problems",
+			"welcomeOverlay.terminal",
+			"welcomeOverlay.commandPalette",
+			"welcomeOverlay.notifications",
+			"welcomeOverlay",
+			"hideWelcomeOverlay"
 		],
 		"vs/workbench/contrib/welcome/page/browser/welcomePage.contribution": [
 			{
@@ -3043,24 +3056,6 @@
 				]
 			}
 		],
-		"vs/workbench/contrib/welcome/overlay/browser/welcomeOverlay": [
-			"welcomeOverlay.explorer",
-			"welcomeOverlay.search",
-			"welcomeOverlay.git",
-			"welcomeOverlay.debug",
-			"welcomeOverlay.extensions",
-			"welcomeOverlay.problems",
-			"welcomeOverlay.terminal",
-			"welcomeOverlay.commandPalette",
-			"welcomeOverlay.notifications",
-			"welcomeOverlay",
-			"hideWelcomeOverlay"
-		],
-		"vs/workbench/contrib/welcome/gettingStarted/browser/gettingStarted.contribution": [
-			"Getting Started",
-			"help",
-			"gettingStartedDescription"
-		],
 		"vs/workbench/contrib/welcome/walkThrough/browser/walkThrough.contribution": [
 			"walkThrough.editor.label",
 			{
@@ -3069,6 +3064,11 @@
 					"&& denotes a mnemonic"
 				]
 			}
+		],
+		"vs/workbench/contrib/welcome/gettingStarted/browser/gettingStarted.contribution": [
+			"Getting Started",
+			"help",
+			"gettingStartedDescription"
 		],
 		"vs/workbench/contrib/callHierarchy/browser/callHierarchy.contribution": [
 			"no.item",
@@ -3177,14 +3177,14 @@
 				]
 			}
 		],
-		"vs/workbench/services/extensions/common/remoteExtensionHost": [
-			"remote extension host Log"
-		],
 		"vs/workbench/services/extensions/common/abstractExtensionService": [
 			"looping"
 		],
 		"vs/workbench/services/extensions/browser/webWorkerExtensionHost": [
 			"name"
+		],
+		"vs/workbench/services/extensions/common/remoteExtensionHost": [
+			"remote extension host Log"
 		],
 		"vs/workbench/services/extensionManagement/common/webExtensionManagementService": [
 			"cannot be installed"
@@ -3467,6 +3467,10 @@
 			"TaskService.pickShowTask",
 			"TaskService.noTaskIsRunning"
 		],
+		"vs/workbench/api/common/extHostExtensionActivator": [
+			"failedDep1",
+			"activationError"
+		],
 		"vs/workbench/contrib/terminal/common/terminal": [
 			"terminalCategory",
 			"vscode.extension.contributes.terminal",
@@ -3476,10 +3480,6 @@
 		],
 		"vs/workbench/contrib/debug/common/abstractDebugAdapter": [
 			"timeout"
-		],
-		"vs/workbench/api/common/extHostExtensionActivator": [
-			"failedDep1",
-			"activationError"
 		],
 		"vs/workbench/api/common/extHost.api.impl": [
 			"extensionLabel"
@@ -5409,6 +5409,11 @@
 			"msg-copy",
 			"msg-delete"
 		],
+		"vs/workbench/contrib/preferences/browser/preferencesActions": [
+			"configureLanguageBasedSettings",
+			"languageDescriptionConfigured",
+			"pickLanguage"
+		],
 		"vs/workbench/contrib/preferences/browser/keybindingsEditor": [
 			"recordKeysLabel",
 			"recordKeysLabelWithKeybinding",
@@ -5443,11 +5448,6 @@
 			"keybindingsLabel",
 			"noKeybinding",
 			"noWhen"
-		],
-		"vs/workbench/contrib/preferences/browser/preferencesActions": [
-			"configureLanguageBasedSettings",
-			"languageDescriptionConfigured",
-			"pickLanguage"
 		],
 		"vs/workbench/contrib/preferences/browser/preferencesEditor": [
 			"SearchSettingsWidget.AriaLabel",
@@ -6247,29 +6247,6 @@
 			"addInlineBreakpoint",
 			"debug"
 		],
-		"vs/workbench/contrib/debug/browser/loadedScriptsView": [
-			"loadedScriptsSession",
-			{
-				"comment": [
-					"Debug is a noun in this context, not a verb."
-				],
-				"key": "loadedScriptsAriaLabel"
-			},
-			"loadedScriptsRootFolderAriaLabel",
-			"loadedScriptsSessionAriaLabel",
-			"loadedScriptsFolderAriaLabel",
-			"loadedScriptsSourceAriaLabel"
-		],
-		"vs/workbench/contrib/debug/browser/debugStatus": [
-			"status.debug",
-			"debugTarget",
-			"selectAndStartDebug"
-		],
-		"vs/workbench/contrib/debug/browser/statusbarColorProvider": [
-			"statusBarDebuggingBackground",
-			"statusBarDebuggingForeground",
-			"statusBarDebuggingBorder"
-		],
 		"vs/workbench/contrib/debug/browser/debugEditorActions": [
 			"toggleBreakpointAction",
 			"conditionalBreakpointEditorAction",
@@ -6288,6 +6265,16 @@
 			"goToPreviousBreakpoint",
 			"closeExceptionWidget"
 		],
+		"vs/workbench/contrib/debug/browser/debugStatus": [
+			"status.debug",
+			"debugTarget",
+			"selectAndStartDebug"
+		],
+		"vs/workbench/contrib/debug/browser/statusbarColorProvider": [
+			"statusBarDebuggingBackground",
+			"statusBarDebuggingForeground",
+			"statusBarDebuggingBorder"
+		],
 		"vs/workbench/contrib/debug/browser/watchExpressionsView": [
 			"editWatchExpression",
 			"removeWatchExpression",
@@ -6301,6 +6288,19 @@
 			},
 			"watchExpressionAriaLabel",
 			"watchVariableAriaLabel"
+		],
+		"vs/workbench/contrib/debug/browser/loadedScriptsView": [
+			"loadedScriptsSession",
+			{
+				"comment": [
+					"Debug is a noun in this context, not a verb."
+				],
+				"key": "loadedScriptsAriaLabel"
+			},
+			"loadedScriptsRootFolderAriaLabel",
+			"loadedScriptsSessionAriaLabel",
+			"loadedScriptsFolderAriaLabel",
+			"loadedScriptsSourceAriaLabel"
 		],
 		"vs/workbench/contrib/debug/browser/variablesView": [
 			"variableValueAriaLabel",
@@ -6675,6 +6675,13 @@
 		"vs/workbench/contrib/extensions/browser/extensionsActivationProgress": [
 			"activation"
 		],
+		"vs/workbench/contrib/extensions/browser/extensionsDependencyChecker": [
+			"extensions",
+			"auto install missing deps",
+			"finished installing missing deps",
+			"reload",
+			"no missing deps"
+		],
 		"vs/workbench/contrib/extensions/browser/extensionsActions": [
 			"noOfYearsAgo",
 			"one year ago",
@@ -6876,13 +6883,6 @@
 			"extensionButtonProminentBackground",
 			"extensionButtonProminentForeground",
 			"extensionButtonProminentHoverBackground"
-		],
-		"vs/workbench/contrib/extensions/browser/extensionsDependencyChecker": [
-			"extensions",
-			"auto install missing deps",
-			"finished installing missing deps",
-			"reload",
-			"no missing deps"
 		],
 		"vs/workbench/contrib/extensions/browser/remoteExtensionsInstaller": [
 			{
@@ -7146,16 +7146,6 @@
 			"workbench.action.tasks.allowAutomaticTasks",
 			"workbench.action.tasks.disallowAutomaticTasks"
 		],
-		"vs/workbench/contrib/tasks/common/jsonSchema_v1": [
-			"JsonSchema.version.deprecated",
-			"JsonSchema.version",
-			"JsonSchema._runner",
-			"JsonSchema.runner",
-			"JsonSchema.windows",
-			"JsonSchema.mac",
-			"JsonSchema.linux",
-			"JsonSchema.shell"
-		],
 		"vs/workbench/contrib/tasks/common/problemMatcher": [
 			"ProblemPatternParser.problemPattern.missingRegExp",
 			"ProblemPatternParser.loopProperty.notLast",
@@ -7225,6 +7215,16 @@
 			"eslint-compact",
 			"eslint-stylish",
 			"go"
+		],
+		"vs/workbench/contrib/tasks/common/jsonSchema_v1": [
+			"JsonSchema.version.deprecated",
+			"JsonSchema.version",
+			"JsonSchema._runner",
+			"JsonSchema.runner",
+			"JsonSchema.windows",
+			"JsonSchema.mac",
+			"JsonSchema.linux",
+			"JsonSchema.shell"
 		],
 		"vs/workbench/contrib/tasks/common/jsonSchema_v2": [
 			"JsonSchema.shell",
@@ -7382,14 +7382,14 @@
 			"removeOptimizations",
 			"reopenFilePrompt"
 		],
-		"vs/workbench/contrib/codeEditor/browser/inspectEditorTokens/inspectEditorTokens": [
-			"inspectEditorTokens",
-			"inspectTMScopesWidget.loading"
-		],
 		"vs/workbench/contrib/codeEditor/browser/quickaccess/gotoLineQuickAccess": [
 			"gotoLineQuickAccessPlaceholder",
 			"gotoLineQuickAccess",
 			"gotoLine"
+		],
+		"vs/workbench/contrib/codeEditor/browser/inspectEditorTokens/inspectEditorTokens": [
+			"inspectEditorTokens",
+			"inspectTMScopesWidget.loading"
 		],
 		"vs/workbench/contrib/codeEditor/browser/saveParticipants": [
 			"formatting",
@@ -7484,6 +7484,22 @@
 		"vs/workbench/contrib/format/browser/formatModified": [
 			"formatChanges"
 		],
+		"vs/base/browser/ui/keybindingLabel/keybindingLabel": [
+			"unbound"
+		],
+		"vs/platform/update/common/update.config.contribution": [
+			"updateConfigurationTitle",
+			"updateMode",
+			"none",
+			"manual",
+			"start",
+			"default",
+			"updateMode",
+			"deprecated",
+			"enableWindowsBackgroundUpdatesTitle",
+			"enableWindowsBackgroundUpdates",
+			"showReleaseNotes"
+		],
 		"vs/workbench/contrib/update/browser/update": [
 			"releaseNotes",
 			"update.noReleaseNotesOnline",
@@ -7529,22 +7545,6 @@
 			"switchToStable",
 			"checkForUpdates"
 		],
-		"vs/platform/update/common/update.config.contribution": [
-			"updateConfigurationTitle",
-			"updateMode",
-			"none",
-			"manual",
-			"start",
-			"default",
-			"updateMode",
-			"deprecated",
-			"enableWindowsBackgroundUpdatesTitle",
-			"enableWindowsBackgroundUpdates",
-			"showReleaseNotes"
-		],
-		"vs/base/browser/ui/keybindingLabel/keybindingLabel": [
-			"unbound"
-		],
 		"vs/workbench/contrib/welcome/page/browser/welcomePage": [
 			"welcomePage",
 			"welcomePage.javaScript",
@@ -7575,10 +7575,6 @@
 			"ok",
 			"details"
 		],
-		"vs/workbench/contrib/welcome/gettingStarted/browser/gettingStarted": [
-			"editorGettingStarted.title",
-			"next"
-		],
 		"vs/workbench/contrib/welcome/walkThrough/browser/walkThroughPart": [
 			"walkThrough.unboundCommand",
 			"walkThrough.gitNotFound",
@@ -7587,6 +7583,10 @@
 		"vs/workbench/contrib/welcome/walkThrough/browser/editor/editorWalkThrough": [
 			"editorWalkThrough.title",
 			"editorWalkThrough"
+		],
+		"vs/workbench/contrib/welcome/gettingStarted/browser/gettingStarted": [
+			"editorGettingStarted.title",
+			"next"
 		],
 		"vs/workbench/contrib/callHierarchy/browser/callHierarchyPeek": [
 			"callFrom",
@@ -7622,12 +7622,6 @@
 			"no-editor",
 			"loading",
 			"no-symbols"
-		],
-		"vs/workbench/contrib/feedback/browser/feedbackStatusbarItem": [
-			"status.feedback",
-			"status.feedback",
-			"status.feedback",
-			"status.feedback"
 		],
 		"vs/workbench/contrib/userDataSync/browser/userDataSync": [
 			"turn on sync with category",
@@ -7733,19 +7727,6 @@
 			"update conflicts",
 			"accept failed"
 		],
-		"vs/workbench/contrib/welcome/common/viewsWelcomeContribution": [
-			"ViewsWelcomeExtensionPoint.proposedAPI"
-		],
-		"vs/workbench/contrib/welcome/common/viewsWelcomeExtensionPoint": [
-			"contributes.viewsWelcome",
-			"contributes.viewsWelcome.view",
-			"contributes.viewsWelcome.view.view",
-			"contributes.viewsWelcome.view.view",
-			"contributes.viewsWelcome.view.contents",
-			"contributes.viewsWelcome.view.when",
-			"contributes.viewsWelcome.view.group",
-			"contributes.viewsWelcome.view.enablement"
-		],
 		"vs/workbench/contrib/codeActions/common/codeActionsContribution": [
 			"codeActionsOnSave.fixAll",
 			"codeActionsOnSave",
@@ -7765,6 +7746,25 @@
 			"contributes.documentation.refactoring.title",
 			"contributes.documentation.refactoring.when",
 			"contributes.documentation.refactoring.command"
+		],
+		"vs/workbench/contrib/feedback/browser/feedbackStatusbarItem": [
+			"status.feedback",
+			"status.feedback",
+			"status.feedback",
+			"status.feedback"
+		],
+		"vs/workbench/contrib/welcome/common/viewsWelcomeContribution": [
+			"ViewsWelcomeExtensionPoint.proposedAPI"
+		],
+		"vs/workbench/contrib/welcome/common/viewsWelcomeExtensionPoint": [
+			"contributes.viewsWelcome",
+			"contributes.viewsWelcome.view",
+			"contributes.viewsWelcome.view.view",
+			"contributes.viewsWelcome.view.view",
+			"contributes.viewsWelcome.view.contents",
+			"contributes.viewsWelcome.view.when",
+			"contributes.viewsWelcome.view.group",
+			"contributes.viewsWelcome.view.enablement"
 		],
 		"vs/workbench/contrib/timeline/browser/timelinePane": [
 			"timeline.loadingMore",
@@ -9329,28 +9329,6 @@
 			"symbolIcon.unitForeground",
 			"symbolIcon.variableForeground"
 		],
-		"vs/workbench/contrib/feedback/browser/feedback": [
-			"sendFeedback",
-			"label.sendASmile",
-			"close",
-			"patchedVersion1",
-			"patchedVersion2",
-			"sentiment",
-			"smileCaption",
-			"smileCaption",
-			"frownCaption",
-			"frownCaption",
-			"other ways to contact us",
-			"submit a bug",
-			"request a missing feature",
-			"tell us why",
-			"feedbackTextInput",
-			"showFeedback",
-			"tweet",
-			"tweetFeedback",
-			"character left",
-			"characters left"
-		],
 		"vs/workbench/contrib/userDataSync/browser/userDataSyncViews": [
 			"showLog",
 			"configure",
@@ -9414,6 +9392,28 @@
 			"placeholder",
 			"not found",
 			"valid message"
+		],
+		"vs/workbench/contrib/feedback/browser/feedback": [
+			"sendFeedback",
+			"label.sendASmile",
+			"close",
+			"patchedVersion1",
+			"patchedVersion2",
+			"sentiment",
+			"smileCaption",
+			"smileCaption",
+			"frownCaption",
+			"frownCaption",
+			"other ways to contact us",
+			"submit a bug",
+			"request a missing feature",
+			"tell us why",
+			"feedbackTextInput",
+			"showFeedback",
+			"tweet",
+			"tweetFeedback",
+			"character left",
+			"characters left"
 		],
 		"vs/workbench/services/textfile/common/textFileSaveParticipant": [
 			"saveParticipants"
@@ -9741,14 +9741,6 @@
 			"Reset User Data",
 			"Would you like to reset your data (settings, keybindings, extensions, snippets and UI State) and reload?"
 		],
-		"vs/base/common/errorMessage": [
-			"{0}: {1}",
-			"A system error occurred ({0})",
-			"An unknown error occurred. Please consult the log for more details.",
-			"An unknown error occurred. Please consult the log for more details.",
-			"{0} ({1} errors in total)",
-			"An unknown error occurred. Please consult the log for more details."
-		],
 		"vs/workbench/browser/workbench": [
 			"Failed to load a required file. Please restart the application to try again. Details: {0}"
 		],
@@ -9853,6 +9845,14 @@
 			"...1 additional file not shown",
 			"...{0} additional files not shown"
 		],
+		"vs/base/common/errorMessage": [
+			"{0}: {1}",
+			"A system error occurred ({0})",
+			"An unknown error occurred. Please consult the log for more details.",
+			"An unknown error occurred. Please consult the log for more details.",
+			"{0} ({1} errors in total)",
+			"An unknown error occurred. Please consult the log for more details."
+		],
 		"vs/platform/extensionManagement/common/extensionManagement": [
 			"Extensions",
 			"Preferences"
@@ -9943,14 +9943,14 @@
 			"Report Issue",
 			"The --status argument is not yet supported in browsers."
 		],
-		"vs/workbench/api/common/extHostWorkspace": [
-			"Extension '{0}' failed to update workspace folders: {1}"
+		"vs/workbench/api/common/extHostExtensionService": [
+			"Path {0} does not point to a valid extension test runner."
 		],
 		"vs/workbench/api/common/extHostTerminalService": [
 			"Could not find the terminal with id {0} on the extension host"
 		],
-		"vs/workbench/api/common/extHostExtensionService": [
-			"Path {0} does not point to a valid extension test runner."
+		"vs/workbench/api/common/extHostWorkspace": [
+			"Extension '{0}' failed to update workspace folders: {1}"
 		],
 		"vs/base/node/processes": [
 			"Can't execute a shell command on a UNC drive."
@@ -11770,25 +11770,15 @@
 			"One or more snippets from the extension '{0}' very likely confuse snippet-variables and snippet-placeholders (see https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax for more details)",
 			"The snippet file \"{0}\" could not be read."
 		],
-		"vs/workbench/contrib/snippets/browser/configureSnippets": [
-			"(global)",
-			"({0})",
-			"Type snippet file name",
-			"Invalid file name",
-			"'{0}' is not a valid file name",
-			"'{0}' already exists",
-			"global",
-			"New Global Snippets file...",
-			"{0} workspace",
-			"New Snippets file for '{0}'...",
-			"Existing Snippets",
-			"New Snippets",
-			"New Snippets",
-			"Select Snippets File or Create Snippets",
-			"Configure User Snippets",
-			"Preferences",
-			"User &&Snippets",
-			"User Snippets"
+		"vs/workbench/contrib/snippets/browser/insertSnippet": [
+			"Insert Snippet",
+			"User Snippets",
+			"Extension Snippets",
+			"Workspace Snippets",
+			"Hide from IntelliSense",
+			"(hidden from IntelliSense)",
+			"Show in IntelliSense",
+			"Select a snippet"
 		],
 		"vs/workbench/contrib/themes/browser/themes.contribution": [
 			"Color Theme",
@@ -11812,9 +11802,6 @@
 			"Color Theme",
 			"File Icon Theme"
 		],
-		"vs/workbench/contrib/update/browser/update.contribution": [
-			"&&Release Notes"
-		],
 		"vs/workbench/contrib/watermark/browser/watermark": [
 			"Show All Commands",
 			"Go to File",
@@ -11828,37 +11815,40 @@
 			"Start Debugging",
 			"When enabled, will show the watermark tips when no editor is open."
 		],
+		"vs/workbench/contrib/update/browser/update.contribution": [
+			"&&Release Notes"
+		],
 		"vs/workbench/contrib/surveys/browser/nps.contribution": [
 			"Do you mind taking a quick feedback survey?",
 			"Take Survey",
 			"Remind Me later",
 			"Don't Show Again"
 		],
+		"vs/workbench/contrib/snippets/browser/configureSnippets": [
+			"(global)",
+			"({0})",
+			"Type snippet file name",
+			"Invalid file name",
+			"'{0}' is not a valid file name",
+			"'{0}' already exists",
+			"global",
+			"New Global Snippets file...",
+			"{0} workspace",
+			"New Snippets file for '{0}'...",
+			"Existing Snippets",
+			"New Snippets",
+			"New Snippets",
+			"Select Snippets File or Create Snippets",
+			"Configure User Snippets",
+			"Preferences",
+			"User &&Snippets",
+			"User Snippets"
+		],
 		"vs/workbench/contrib/surveys/browser/languageSurveys.contribution": [
 			"Help us improve our support for {0}",
 			"Take Short Survey",
 			"Remind Me later",
 			"Don't Show Again"
-		],
-		"vs/workbench/contrib/snippets/browser/insertSnippet": [
-			"Insert Snippet",
-			"User Snippets",
-			"Extension Snippets",
-			"Workspace Snippets",
-			"Hide from IntelliSense",
-			"(hidden from IntelliSense)",
-			"Show in IntelliSense",
-			"Select a snippet"
-		],
-		"vs/workbench/contrib/welcome/page/browser/welcomePage.contribution": [
-			"Start without an editor.",
-			"Open the Welcome page (default).",
-			"Open the README when opening a folder that contains one, fallback to 'welcomePage' otherwise.",
-			"Open a new untitled file (only applies when opening an empty workspace).",
-			"Open the Welcome page when opening an empty workbench.",
-			"Open the Getting Started page (experimental).",
-			"Controls which editor is shown at startup, if none are restored from the previous session.",
-			"&&Welcome"
 		],
 		"vs/workbench/contrib/welcome/overlay/browser/welcomeOverlay": [
 			"File explorer",
@@ -11873,14 +11863,24 @@
 			"User Interface Overview",
 			"Hide Interface Overview"
 		],
-		"vs/workbench/contrib/welcome/gettingStarted/browser/gettingStarted.contribution": [
-			"Getting Started",
-			"Help",
-			"Enables an experimental Getting Started page, accesible via the Help menu."
+		"vs/workbench/contrib/welcome/page/browser/welcomePage.contribution": [
+			"Start without an editor.",
+			"Open the Welcome page (default).",
+			"Open the README when opening a folder that contains one, fallback to 'welcomePage' otherwise.",
+			"Open a new untitled file (only applies when opening an empty workspace).",
+			"Open the Welcome page when opening an empty workbench.",
+			"Open the Getting Started page (experimental).",
+			"Controls which editor is shown at startup, if none are restored from the previous session.",
+			"&&Welcome"
 		],
 		"vs/workbench/contrib/welcome/walkThrough/browser/walkThrough.contribution": [
 			"Interactive Playground",
 			"I&&nteractive Playground"
+		],
+		"vs/workbench/contrib/welcome/gettingStarted/browser/gettingStarted.contribution": [
+			"Getting Started",
+			"Help",
+			"Enables an experimental Getting Started page, accesible via the Help menu."
 		],
 		"vs/workbench/contrib/callHierarchy/browser/callHierarchy.contribution": [
 			"No results",
@@ -11979,14 +11979,14 @@
 			"A file or folder with the name '{0}' already exists in the folder '{1}'. Replacing it will overwrite its current contents.",
 			"&&Replace"
 		],
-		"vs/workbench/services/extensions/common/remoteExtensionHost": [
-			"Remote Extension Host"
-		],
 		"vs/workbench/services/extensions/common/abstractExtensionService": [
 			"The following extensions contain dependency loops and have been disabled: {0}"
 		],
 		"vs/workbench/services/extensions/browser/webWorkerExtensionHost": [
 			"Worker Extension Host"
+		],
+		"vs/workbench/services/extensions/common/remoteExtensionHost": [
+			"Remote Extension Host"
 		],
 		"vs/workbench/services/extensionManagement/common/webExtensionManagementService": [
 			"Cannot install '{0}' because this extension is not a web extension."
@@ -12234,6 +12234,10 @@
 			"Select the task to show its output",
 			"No task is running"
 		],
+		"vs/workbench/api/common/extHostExtensionActivator": [
+			"Cannot activate extension '{0}' because it depends on extension '{1}', which failed to activate.",
+			"Activating extension '{0}' failed: {1}."
+		],
 		"vs/workbench/contrib/terminal/common/terminal": [
 			"Terminal",
 			"Contributes terminal functionality.",
@@ -12243,10 +12247,6 @@
 		],
 		"vs/workbench/contrib/debug/common/abstractDebugAdapter": [
 			"Timeout after {0} ms for '{1}'"
-		],
-		"vs/workbench/api/common/extHostExtensionActivator": [
-			"Cannot activate extension '{0}' because it depends on extension '{1}', which failed to activate.",
-			"Activating extension '{0}' failed: {1}."
 		],
 		"vs/workbench/api/common/extHost.api.impl": [
 			"{0} (Extension)"
@@ -13728,6 +13728,11 @@
 			"Running 'File Copy' participants...",
 			"Running 'File Delete' participants..."
 		],
+		"vs/workbench/contrib/preferences/browser/preferencesActions": [
+			"Configure Language Specific Settings...",
+			"({0})",
+			"Select Language"
+		],
 		"vs/workbench/contrib/preferences/browser/keybindingsEditor": [
 			"Record Keys",
 			"{0} ({1})",
@@ -13762,11 +13767,6 @@
 			"Keybindings",
 			"No Keybinding assigned.",
 			"No when context."
-		],
-		"vs/workbench/contrib/preferences/browser/preferencesActions": [
-			"Configure Language Specific Settings...",
-			"({0})",
-			"Select Language"
 		],
 		"vs/workbench/contrib/preferences/browser/preferencesEditor": [
 			"Search settings",
@@ -14440,24 +14440,6 @@
 			"Add Inline Breakpoint",
 			"Debug"
 		],
-		"vs/workbench/contrib/debug/browser/loadedScriptsView": [
-			"Debug Session",
-			"Debug Loaded Scripts",
-			"Workspace folder {0}, loaded script, debug",
-			"Session {0}, loaded script, debug",
-			"Folder {0}, loaded script, debug",
-			"{0}, loaded script, debug"
-		],
-		"vs/workbench/contrib/debug/browser/debugStatus": [
-			"Debug",
-			"Debug: {0}",
-			"Select and start debug configuration"
-		],
-		"vs/workbench/contrib/debug/browser/statusbarColorProvider": [
-			"Status bar background color when a program is being debugged. The status bar is shown in the bottom of the window",
-			"Status bar foreground color when a program is being debugged. The status bar is shown in the bottom of the window",
-			"Status bar border color separating to the sidebar and editor when a program is being debugged. The status bar is shown in the bottom of the window"
-		],
 		"vs/workbench/contrib/debug/browser/debugEditorActions": [
 			"Debug: Toggle Breakpoint",
 			"Debug: Add Conditional Breakpoint...",
@@ -14471,6 +14453,16 @@
 			"Debug: Go To Previous Breakpoint",
 			"Close Exception Widget"
 		],
+		"vs/workbench/contrib/debug/browser/debugStatus": [
+			"Debug",
+			"Debug: {0}",
+			"Select and start debug configuration"
+		],
+		"vs/workbench/contrib/debug/browser/statusbarColorProvider": [
+			"Status bar background color when a program is being debugged. The status bar is shown in the bottom of the window",
+			"Status bar foreground color when a program is being debugged. The status bar is shown in the bottom of the window",
+			"Status bar border color separating to the sidebar and editor when a program is being debugged. The status bar is shown in the bottom of the window"
+		],
 		"vs/workbench/contrib/debug/browser/watchExpressionsView": [
 			"Edit Expression",
 			"Remove Expression",
@@ -14479,6 +14471,14 @@
 			"Debug Watch Expressions",
 			"{0}, value {1}",
 			"{0}, value {1}"
+		],
+		"vs/workbench/contrib/debug/browser/loadedScriptsView": [
+			"Debug Session",
+			"Debug Loaded Scripts",
+			"Workspace folder {0}, loaded script, debug",
+			"Session {0}, loaded script, debug",
+			"Folder {0}, loaded script, debug",
+			"{0}, loaded script, debug"
 		],
 		"vs/workbench/contrib/debug/browser/variablesView": [
 			"Type new variable value",
@@ -14808,6 +14808,13 @@
 		"vs/workbench/contrib/extensions/browser/extensionsActivationProgress": [
 			"Activating Extensions..."
 		],
+		"vs/workbench/contrib/extensions/browser/extensionsDependencyChecker": [
+			"Extensions",
+			"Install Missing Dependencies",
+			"Finished installing missing dependencies. Please reload the window now.",
+			"Reload Window",
+			"There are no missing dependencies to install."
+		],
 		"vs/workbench/contrib/extensions/browser/extensionsActions": [
 			"{0} years ago",
 			"1 year ago",
@@ -14979,13 +14986,6 @@
 			"Button background color for actions extension that stand out (e.g. install button).",
 			"Button foreground color for actions extension that stand out (e.g. install button).",
 			"Button background hover color for actions extension that stand out (e.g. install button)."
-		],
-		"vs/workbench/contrib/extensions/browser/extensionsDependencyChecker": [
-			"Extensions",
-			"Install Missing Dependencies",
-			"Finished installing missing dependencies. Please reload the window now.",
-			"Reload Window",
-			"There are no missing dependencies to install."
 		],
 		"vs/workbench/contrib/extensions/browser/remoteExtensionsInstaller": [
 			"Remote",
@@ -15189,16 +15189,6 @@
 			"Allow Automatic Tasks in Folder",
 			"Disallow Automatic Tasks in Folder"
 		],
-		"vs/workbench/contrib/tasks/common/jsonSchema_v1": [
-			"Task version 0.1.0 is deprecated. Please use 2.0.0",
-			"The config's version number",
-			"The runner has graduated. Use the official runner property",
-			"Defines whether the task is executed as a process and the output is shown in the output window or inside the terminal.",
-			"Windows specific command configuration",
-			"Mac specific command configuration",
-			"Linux specific command configuration",
-			"Specifies whether the command is a shell command or an external program. Defaults to false if omitted."
-		],
 		"vs/workbench/contrib/tasks/common/problemMatcher": [
 			"The problem pattern is missing a regular expression.",
 			"The loop property is only supported on the last line matcher.",
@@ -15268,6 +15258,16 @@
 			"ESLint compact problems",
 			"ESLint stylish problems",
 			"Go problems"
+		],
+		"vs/workbench/contrib/tasks/common/jsonSchema_v1": [
+			"Task version 0.1.0 is deprecated. Please use 2.0.0",
+			"The config's version number",
+			"The runner has graduated. Use the official runner property",
+			"Defines whether the task is executed as a process and the output is shown in the output window or inside the terminal.",
+			"Windows specific command configuration",
+			"Mac specific command configuration",
+			"Linux specific command configuration",
+			"Specifies whether the command is a shell command or an external program. Defaults to false if omitted."
 		],
 		"vs/workbench/contrib/tasks/common/jsonSchema_v2": [
 			"Specifies whether the command is a shell command or an external program. Defaults to false if omitted.",
@@ -15410,14 +15410,14 @@
 			"Forcefully enable features",
 			"Please reopen file in order for this setting to take effect."
 		],
-		"vs/workbench/contrib/codeEditor/browser/inspectEditorTokens/inspectEditorTokens": [
-			"Developer: Inspect Editor Tokens and Scopes",
-			"Loading..."
-		],
 		"vs/workbench/contrib/codeEditor/browser/quickaccess/gotoLineQuickAccess": [
 			"Type the line number and optional column to go to (e.g. 42:5 for line 42 and column 5).",
 			"Go to Line/Column",
 			"Go to Line/Column..."
+		],
+		"vs/workbench/contrib/codeEditor/browser/inspectEditorTokens/inspectEditorTokens": [
+			"Developer: Inspect Editor Tokens and Scopes",
+			"Loading..."
 		],
 		"vs/workbench/contrib/codeEditor/browser/saveParticipants": [
 			"Running '{0}' Formatter ([configure](command:workbench.action.openSettings?%5B%22editor.formatOnSave%22%5D)).",
@@ -15487,6 +15487,22 @@
 		"vs/workbench/contrib/format/browser/formatModified": [
 			"Format Modified Lines"
 		],
+		"vs/base/browser/ui/keybindingLabel/keybindingLabel": [
+			"Unbound"
+		],
+		"vs/platform/update/common/update.config.contribution": [
+			"Update",
+			"Configure whether you receive automatic updates. Requires a restart after change. The updates are fetched from a Microsoft online service.",
+			"Disable updates.",
+			"Disable automatic background update checks. Updates will be available if you manually check for updates.",
+			"Check for updates only on startup. Disable automatic background update checks.",
+			"Enable automatic update checks. Code will check for updates automatically and periodically.",
+			"Configure whether you receive automatic updates. Requires a restart after change. The updates are fetched from a Microsoft online service.",
+			"This setting is deprecated, please use '{0}' instead.",
+			"Enable Background Updates on Windows",
+			"Enable to download and install new VS Code Versions in the background on Windows",
+			"Show Release Notes after an update. The Release Notes are fetched from a Microsoft online service."
+		],
 		"vs/workbench/contrib/update/browser/update": [
 			"Release Notes",
 			"This version of {0} does not have release notes online",
@@ -15532,22 +15548,6 @@
 			"Switch to Stable Version...",
 			"Check for Updates..."
 		],
-		"vs/platform/update/common/update.config.contribution": [
-			"Update",
-			"Configure whether you receive automatic updates. Requires a restart after change. The updates are fetched from a Microsoft online service.",
-			"Disable updates.",
-			"Disable automatic background update checks. Updates will be available if you manually check for updates.",
-			"Check for updates only on startup. Disable automatic background update checks.",
-			"Enable automatic update checks. Code will check for updates automatically and periodically.",
-			"Configure whether you receive automatic updates. Requires a restart after change. The updates are fetched from a Microsoft online service.",
-			"This setting is deprecated, please use '{0}' instead.",
-			"Enable Background Updates on Windows",
-			"Enable to download and install new VS Code Versions in the background on Windows",
-			"Show Release Notes after an update. The Release Notes are fetched from a Microsoft online service."
-		],
-		"vs/base/browser/ui/keybindingLabel/keybindingLabel": [
-			"Unbound"
-		],
 		"vs/workbench/contrib/welcome/page/browser/welcomePage": [
 			"Welcome",
 			"JavaScript",
@@ -15578,10 +15578,6 @@
 			"OK",
 			"Details"
 		],
-		"vs/workbench/contrib/welcome/gettingStarted/browser/gettingStarted": [
-			"Getting Started",
-			"Next"
-		],
 		"vs/workbench/contrib/welcome/walkThrough/browser/walkThroughPart": [
 			"unbound",
 			"It looks like Git is not installed on your system.",
@@ -15590,6 +15586,10 @@
 		"vs/workbench/contrib/welcome/walkThrough/browser/editor/editorWalkThrough": [
 			"Interactive Playground",
 			"Interactive Playground"
+		],
+		"vs/workbench/contrib/welcome/gettingStarted/browser/gettingStarted": [
+			"Getting Started",
+			"Next"
 		],
 		"vs/workbench/contrib/callHierarchy/browser/callHierarchyPeek": [
 			"Calls from '{0}'",
@@ -15625,12 +15625,6 @@
 			"The active editor cannot provide outline information.",
 			"Loading document symbols for '{0}'...",
 			"No symbols found in document '{0}'"
-		],
-		"vs/workbench/contrib/feedback/browser/feedbackStatusbarItem": [
-			"Tweet Feedback",
-			"Tweet Feedback",
-			"Tweet Feedback",
-			"Tweet Feedback"
 		],
 		"vs/workbench/contrib/userDataSync/browser/userDataSync": [
 			"{0}: Turn On...",
@@ -15726,19 +15720,6 @@
 			"Could not resolve conflicts as there is new local version available. Please try again.",
 			"Error while accepting changes. Please check [logs]({0}) for more details."
 		],
-		"vs/workbench/contrib/welcome/common/viewsWelcomeContribution": [
-			"The viewsWelcome contribution in '{0}' requires 'enableProposedApi' to be enabled."
-		],
-		"vs/workbench/contrib/welcome/common/viewsWelcomeExtensionPoint": [
-			"Contributed views welcome content. Welcome content will be rendered in tree based views whenever they have no meaningful content to display, ie. the File Explorer when no folder is open. Such content is useful as in-product documentation to drive users to use certain features before they are available. A good example would be a `Clone Repository` button in the File Explorer welcome view.",
-			"Contributed welcome content for a specific view.",
-			"Target view identifier for this welcome content. Only tree based views are supported.",
-			"Target view identifier for this welcome content. Only tree based views are supported.",
-			"Welcome content to be displayed. The format of the contents is a subset of Markdown, with support for links only.",
-			"Condition when the welcome content should be displayed.",
-			"Group to which this welcome content belongs.",
-			"Condition when the welcome content buttons should be enabled."
-		],
 		"vs/workbench/contrib/codeActions/common/codeActionsContribution": [
 			"Controls whether auto fix action should be run on file save.",
 			"Code action kinds to be run on save.",
@@ -15758,6 +15739,25 @@
 			"Label for the documentation used in the UI.",
 			"When clause.",
 			"Command executed."
+		],
+		"vs/workbench/contrib/feedback/browser/feedbackStatusbarItem": [
+			"Tweet Feedback",
+			"Tweet Feedback",
+			"Tweet Feedback",
+			"Tweet Feedback"
+		],
+		"vs/workbench/contrib/welcome/common/viewsWelcomeContribution": [
+			"The viewsWelcome contribution in '{0}' requires 'enableProposedApi' to be enabled."
+		],
+		"vs/workbench/contrib/welcome/common/viewsWelcomeExtensionPoint": [
+			"Contributed views welcome content. Welcome content will be rendered in tree based views whenever they have no meaningful content to display, ie. the File Explorer when no folder is open. Such content is useful as in-product documentation to drive users to use certain features before they are available. A good example would be a `Clone Repository` button in the File Explorer welcome view.",
+			"Contributed welcome content for a specific view.",
+			"Target view identifier for this welcome content. Only tree based views are supported.",
+			"Target view identifier for this welcome content. Only tree based views are supported.",
+			"Welcome content to be displayed. The format of the contents is a subset of Markdown, with support for links only.",
+			"Condition when the welcome content should be displayed.",
+			"Group to which this welcome content belongs.",
+			"Condition when the welcome content buttons should be enabled."
 		],
 		"vs/workbench/contrib/timeline/browser/timelinePane": [
 			"Loading...",
@@ -17132,28 +17132,6 @@
 			"The foreground color for unit symbols. These symbols appear in the outline, breadcrumb, and suggest widget.",
 			"The foreground color for variable symbols. These symbols appear in the outline, breadcrumb, and suggest widget."
 		],
-		"vs/workbench/contrib/feedback/browser/feedback": [
-			"Tweet Feedback",
-			"Tweet us your feedback.",
-			"Close",
-			"Your installation is corrupt.",
-			"Please specify this if you submit a bug.",
-			"How was your experience?",
-			"Happy Feedback Sentiment",
-			"Happy Feedback Sentiment",
-			"Sad Feedback Sentiment",
-			"Sad Feedback Sentiment",
-			"Other ways to contact us",
-			"Submit a bug",
-			"Request a missing feature",
-			"Tell us why?",
-			"Tell us your feedback",
-			"Show Feedback Icon in Status Bar",
-			"Tweet",
-			"Tweet Feedback",
-			"character left",
-			"characters left"
-		],
 		"vs/workbench/contrib/userDataSync/browser/userDataSyncViews": [
 			"Show Log",
 			"Configure...",
@@ -17182,6 +17160,28 @@
 			"Enter the name of the machine",
 			"machine not found with id: {0}",
 			"Machine name should be unique and not empty"
+		],
+		"vs/workbench/contrib/feedback/browser/feedback": [
+			"Tweet Feedback",
+			"Tweet us your feedback.",
+			"Close",
+			"Your installation is corrupt.",
+			"Please specify this if you submit a bug.",
+			"How was your experience?",
+			"Happy Feedback Sentiment",
+			"Happy Feedback Sentiment",
+			"Sad Feedback Sentiment",
+			"Sad Feedback Sentiment",
+			"Other ways to contact us",
+			"Submit a bug",
+			"Request a missing feature",
+			"Tell us why?",
+			"Tell us your feedback",
+			"Show Feedback Icon in Status Bar",
+			"Tweet",
+			"Tweet Feedback",
+			"character left",
+			"characters left"
 		],
 		"vs/workbench/services/textfile/common/textFileSaveParticipant": [
 			"Saving '{0}'"
